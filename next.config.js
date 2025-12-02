@@ -1,20 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable static export for GitHub Pages
+  output: 'export',
+
+  // Base path for GitHub Pages (will be repo name)
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+
+  // Disable image optimization for static export
+  images: {
+    unoptimized: true,
+  },
+
   // Enable SWC minification
   swcMinify: true,
 
-  // Image optimization
-  images: {
-    formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-  },
-
-  // Compression
-  compress: true,
-
-  // Output
-  output: 'standalone'
+  // Trailing slashes for better GitHub Pages compatibility
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
