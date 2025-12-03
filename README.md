@@ -1,208 +1,104 @@
 # R² Solutions Website
 
-Ultra-premium AI consulting website built with Next.js 14, optimized for GitHub Pages static hosting.
+Ultra-premium AI consulting website built with Next.js 14.
 
-![Next.js](https://img.shields.io/badge/Next.js-14.0.4-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3-38bdf8)
+## 🎨 Overview
 
-## 🚀 Live Demo
+Professional website for R² Solutions, an AI consulting firm specializing in industry-specific AI agents.
 
-**GitHub Pages URL:** https://tpreisser.github.io/R-Website/
+## 🛠️ Tech Stack
 
-## ✨ Features
-
-- **Ultra-Premium Design** - Minimalist aesthetic with generous whitespace
-- **Fully Responsive** - Mobile-first design that works on all devices
-- **Smooth Animations** - Framer Motion scroll-triggered animations
-- **SEO Optimized** - Complete metadata and sitemap
-- **Static Export** - Optimized for GitHub Pages hosting
-- **TypeScript** - Full type safety
-- **Fast Performance** - Lightweight build (~140KB per page)
+- **Framework:** Next.js 14.0.4 (App Router)
+- **Language:** TypeScript 5.9.3
+- **Styling:** Tailwind CSS 3.3
+- **Animations:** Framer Motion 12.23
+- **Fonts:** Google Fonts (Fraunces serif + Inter sans-serif)
 
 ## 📁 Project Structure
 
 ```
 r2-solutions/
-├── app/                    # Next.js 14 App Router pages
+├── app/                    # Next.js 14 App Router
 │   ├── page.tsx           # Homepage
 │   ├── workshop/          # Workshop page
 │   ├── about/             # About page
 │   ├── contact/           # Contact page
 │   ├── solutions/         # Solutions page
 │   ├── industries/        # Industries page
-│   ├── layout.tsx         # Root layout
-│   └── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout with SEO
+│   └── globals.css        # Global styles + Tailwind
 ├── components/
-│   ├── ui/                # Reusable UI components
+│   ├── ui/                # Reusable components (Button, Card, etc.)
 │   ├── layout/            # Header & Footer
 │   ├── sections/          # Homepage sections
 │   └── forms/             # Contact form
-├── lib/                   # Utility functions
-├── public/                # Static assets
-│   ├── sitemap.xml       # SEO sitemap
-│   ├── robots.txt        # Crawler instructions
-│   └── .nojekyll         # GitHub Pages config
-└── .github/
-    └── workflows/
-        └── deploy.yml     # Auto-deployment workflow
+├── lib/
+│   └── utils.ts           # Utility functions
+└── public/                # Static assets
 ```
 
-## 🛠️ Tech Stack
+## 📄 Pages
 
-- **Framework:** Next.js 14.0.4 (Static Export)
-- **Language:** TypeScript 5.9.3
-- **Styling:** Tailwind CSS 3.3
-- **Animations:** Framer Motion 12.23
-- **Fonts:** Google Fonts (Fraunces + Inter)
-- **Hosting:** GitHub Pages
+### Homepage
+- Hero section with value proposition
+- Problem statement (AI implementation challenges)
+- R² Difference (3 key differentiators)
+- Workshop CTA with guarantee badge
+- How We're Different (3-column cards)
+- Industries grid
+- Final CTA
 
-## 📦 Installation
+### Workshop Page
+- One-day workshop overview
+- Timeline (Before, During, After)
+- 100% money-back guarantee
+- Who should attend
+- FAQ section
 
-```bash
-# Clone the repository
-git clone https://github.com/tpreisser/R-Website.git
-cd R-Website
+### About Page
+- Company story
+- Team profiles
+- Approach: Pragmatic, Innovative, Trusted
 
-# Install dependencies
-npm install
+### Solutions Page
+- Agent Factory Platform
+- Cross-Sell Automation
+- Back-Office Automation
+- Integration Services
 
-# Run development server
-npm run dev
-```
+### Industries Page
+- Insurance
+- Healthcare
+- Financial Services
+- Home Services
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 🏗️ Build & Export
-
-```bash
-# Build static export for GitHub Pages
-npm run build
-
-# Output will be in ./out directory
-```
-
-## 🚀 Deployment to GitHub Pages
-
-### Automatic Deployment (Recommended)
-
-This repository is configured for **automatic deployment** via GitHub Actions.
-
-#### Steps:
-
-1. **Enable GitHub Pages in Repository Settings:**
-   - Go to: `Settings` → `Pages`
-   - **Source:** Select "GitHub Actions"
-   - Save
-
-2. **Push to Main Branch:**
-   ```bash
-   git push origin main
-   ```
-
-3. **GitHub Actions will automatically:**
-   - Install dependencies
-   - Build the static site
-   - Deploy to GitHub Pages
-
-4. **Visit your site:**
-   - URL: `https://tpreisser.github.io/R-Website/`
-   - Check deployment status in the "Actions" tab
-
-### Manual Deployment
-
-If you prefer manual deployment:
-
-```bash
-# Build the site
-npm run build
-
-# The ./out folder contains your static site
-# Commit and push the out folder to gh-pages branch
-```
+### Contact Page
+- Full contact form
+- Email link
 
 ## 🎨 Design System
 
 ### Colors
 - **R² Blue:** `#025082` - Primary brand color
-- **Urgent Orange:** `#FF6B35` - CTAs only
-- **Gray Scale:** Cool-toned grays for text and backgrounds
+- **Urgent Orange:** `#FF6B35` - CTAs and accents
+- **Cool Grays:** For text and backgrounds
 
 ### Typography
-- **Headings:** Fraunces (serif) - Premium, high-contrast
+- **Headings:** Fraunces (serif) - Premium, sophisticated
 - **Body:** Inter (sans-serif) - Clean, readable
 
-### Spacing
-- **Base unit:** 4px (Tailwind default)
-- **Generous whitespace** throughout
+### Components
+- **Button:** 4 variants (primary, secondary, ghost, dark)
+- **Card:** 3 variants (default, hover, feature)
+- **Badge:** Animated guarantee badge
+- **Container:** 6 size options
+- **AnimatedSection:** Scroll-triggered animations
 
-## 📄 Pages
+## 🚀 Development
 
-1. **Homepage** (`/`)
-   - Hero with value proposition
-   - Problem statement
-   - R² Difference
-   - Workshop CTA
-   - Industries served
-   - Final CTA
+This project is developed in Claude Code and reviewed on GitHub.
 
-2. **Workshop** (`/workshop`)
-   - One-day workshop details
-   - How it works (timeline)
-   - 100% money-back guarantee
-   - Who should attend
-   - FAQ
-
-3. **About** (`/about`)
-   - Company story
-   - Team profiles
-   - Approach (Pragmatic, Innovative, Trusted)
-
-4. **Solutions** (`/solutions`)
-   - Agent Factory Platform
-   - Cross-Sell Automation
-   - Back-Office Automation
-   - Integration Services
-
-5. **Industries** (`/industries`)
-   - Insurance
-   - Healthcare
-   - Financial Services
-   - Home Services
-
-6. **Contact** (`/contact`)
-   - Contact form
-   - Email link
-
-## 🔧 Configuration
-
-### Environment Variables
-
-For custom base paths (if deploying to subdirectory):
-
-```bash
-NEXT_PUBLIC_BASE_PATH=/your-repo-name
-```
-
-This is automatically set in the GitHub Actions workflow.
-
-### Next.js Config
-
-The site is configured for static export in `next.config.js`:
-
-```javascript
-module.exports = {
-  output: 'export',
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  images: { unoptimized: true },
-  trailingSlash: true,
-};
-```
-
-## 📊 Performance
-
-Build output (production):
-
+### Build Info
 ```
 Route                    Size     First Load JS
 / (Homepage)            4.73 kB   140 kB
@@ -213,36 +109,20 @@ Route                    Size     First Load JS
 /workshop               3.58 kB   139 kB
 ```
 
-All pages load in **under 140KB** - extremely fast! ⚡
+## ✨ Features
 
-## 🤝 Contributing
+- ✅ Ultra-premium minimalist design
+- ✅ Fully responsive (mobile-first)
+- ✅ Smooth scroll animations (Framer Motion)
+- ✅ TypeScript for type safety
+- ✅ SEO optimized with metadata
+- ✅ Fast performance (< 140KB per page)
+- ✅ Accessible and semantic HTML
 
-This is a private project. Contact the repository owner for contribution guidelines.
+## 📝 Notes
 
-## 📝 License
-
-Copyright © 2024 R² Solutions. All rights reserved.
-
-## 🆘 Support
-
-For issues or questions:
-- **Email:** hello@r2solutions.ai
-- **GitHub Issues:** [Create an issue](https://github.com/tpreisser/R-Website/issues)
-
-## 🎯 Deployment Checklist
-
-- [x] Next.js configured for static export
-- [x] GitHub Actions workflow created
-- [x] .nojekyll file added
-- [x] Static sitemap.xml created
-- [x] robots.txt configured
-- [x] All images set to unoptimized
-- [x] Base path configured for GitHub Pages
-- [x] Trailing slashes enabled
-- [x] Build tested successfully
-- [ ] GitHub Pages enabled in repository settings
-- [ ] DNS configured (if using custom domain)
+Built following comprehensive 10,000+ word blueprint with pixel-perfect specifications for every component, page, and interaction.
 
 ---
 
-**Built with ❤️ using Next.js 14 + TypeScript + Tailwind CSS**
+**Built with Next.js 14 + TypeScript + Tailwind CSS**
