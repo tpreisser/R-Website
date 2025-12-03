@@ -1,12 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable SWC minification
-  swcMinify: true,
+  // Enable static export for GitHub Pages
+  output: 'export',
 
-  // Image optimization
+  // Base path for GitHub Pages
+  basePath: '/R-Website',
+
+  // Disable image optimization for static export
   images: {
     unoptimized: true,
   },
+
+  // Enable SWC minification
+  swcMinify: true,
+
+  // Trailing slashes for GitHub Pages
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
